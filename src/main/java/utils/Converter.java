@@ -20,7 +20,7 @@ public class Converter {
 
     private float getRate() throws JsonProcessingException {
 
-        String url = "https://api.exchangeratesapi.io/latest?" + baseCurrency;
+        String url = "https://api.exchangeratesapi.io/latest?base=" + baseCurrency;
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(url, String.class);
 
         ObjectMapper mapper = new ObjectMapper();
